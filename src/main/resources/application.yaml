@@ -1,0 +1,23 @@
+server:
+    port: 8080
+
+spring:
+    datasource:
+        url: jdbc:sqlserver://localhost:1433;databaseName=MS_EMAIL;encrypt=false;trustServerCertificate=true
+        username: sa
+        password: password
+        driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    jpa:
+        show-sql: false
+        database-platform: org.hibernate.dialect.SQLServer2012Dialect
+        hibernate:
+            ddl-auto: update
+    mail:
+        username: msemailtest01@gmail.com
+        password: obkplznchsrcztrk
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    starttls:
+                        enable: true
