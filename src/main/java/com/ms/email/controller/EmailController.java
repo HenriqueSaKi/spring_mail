@@ -7,6 +7,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +19,11 @@ public class EmailController {
 
     @Autowired
     EmailServiceImpl service;
+
+    @GetMapping("/healthCheck")
+    public ResponseEntity<String> healthCheck () {
+        return ResponseEntity.status(HttpStatus.OK).body("The service is available!");
+    }
 
     @PostMapping("/send_email")
     public ResponseEntity<EmailModel> sendEmail (@RequestBody @Valid EmailDTO emailDTO) {
