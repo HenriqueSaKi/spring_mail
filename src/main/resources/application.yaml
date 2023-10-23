@@ -4,8 +4,8 @@ server:
 spring:
     datasource:
         url: jdbc:sqlserver://localhost:1433;databaseName=MS_EMAIL;encrypt=false;trustServerCertificate=true
-        username: sa
-        password: password
+        username: ${datasource_username}
+        password: ${datasource_password}
         driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
     jpa:
         show-sql: false
@@ -13,8 +13,8 @@ spring:
         hibernate:
             ddl-auto: update
     mail:
-        username: msemailtest01@gmail.com
-        password: *****
+        username: ${mail_username}
+        password: ${mail_password}
         properties:
             mail:
                 smtp:
@@ -22,8 +22,8 @@ spring:
                     starttls:
                         enable: true
     rabbitmq:
-        addresses: *******
-        queue: mqlocal.ms.email.project
+        addresses: ${rabbitmq_address}
+        queue: ${rabbitmq_queue}
 
 springdoc:
     api-docs:
