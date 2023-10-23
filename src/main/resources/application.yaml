@@ -14,7 +14,7 @@ spring:
             ddl-auto: update
     mail:
         username: msemailtest01@gmail.com
-        password: obkplznchsrcztrk
+        password: *****
         properties:
             mail:
                 smtp:
@@ -22,7 +22,7 @@ spring:
                     starttls:
                         enable: true
     rabbitmq:
-        addresses: amqps://ejravald:mAqlqSlzoIqKxtYjNCd4kZO2L98zK68P@chimpanzee.rmq.cloudamqp.com/ejravald
+        addresses: *******
         queue: mqlocal.ms.email.project
 
 springdoc:
