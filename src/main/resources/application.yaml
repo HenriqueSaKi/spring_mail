@@ -21,6 +21,9 @@ spring:
                     auth: true
                     starttls:
                         enable: true
+    rabbitmq:
+        addresses: amqps://ejravald:mAqlqSlzoIqKxtYjNCd4kZO2L98zK68P@chimpanzee.rmq.cloudamqp.com/ejravald
+        queue: mqlocal.ms.email.project
 
 springdoc:
     api-docs:
