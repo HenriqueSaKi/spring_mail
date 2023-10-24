@@ -1,33 +1,31 @@
 server:
-    port: 8080
+  port: 8080
+  servlet:
+    context-path: /api/v1
 
 spring:
-    datasource:
-        url: jdbc:sqlserver://localhost:1433;databaseName=MS_EMAIL;encrypt=false;trustServerCertificate=true
-        username: ${datasource_username}
-        password: ${datasource_password}
-        driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    jpa:
-        show-sql: false
-        database-platform: org.hibernate.dialect.SQLServer2012Dialect
-        hibernate:
-            ddl-auto: update
-    mail:
-        username: ${mail_username}
-        password: ${mail_password}
-        properties:
-            mail:
-                smtp:
-                    auth: true
-                    starttls:
-                        enable: true
-    rabbitmq:
-        addresses: ${rabbitmq_address}
-        queue: ${rabbitmq_queue}
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=MS_EMAIL;encrypt=false;trustServerCertificate=true
+    username: ${datasource_username}
+    password: ${datasource_password}
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    show-sql: false
+    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+    hibernate:
+      ddl-auto: update
+  mail:
+    username: ${mail_username}
+    password: ${mail_password}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  rabbitmq:
+    addresses: ${rabbitmq_address}
+    queue: ${rabbitmq_queue}
 
 springdoc:
-    api-docs:
-        enabled: true
-    swagger-ui:
-        enabled: true
-    packages-to-scan: com.ms.email.controller
+  path: /api/v1

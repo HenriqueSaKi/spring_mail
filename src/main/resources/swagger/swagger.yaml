@@ -1,0 +1,99 @@
+openapi: 3.0.3
+info:
+  title: Send Email Microservice
+  description: Microservice for send email
+  contact:
+    email: satoshikisaki@hotmail.com
+  version: 1.0.0
+tags:
+  - name: email
+paths:
+  /healthCheck:
+    get:
+      tags:
+        - email
+      summary: Service status
+      description: Returns service status
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: string
+                example: "The service is available!"
+  /send_email:
+    post:
+      tags:
+        - email
+      summary: Place order
+      description: Place order
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmailDTO'
+      responses:
+        '201':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmailModel'
+        '404':
+          description: send email failed
+          content:
+            application/json:
+              schema:
+                type: string
+                example: "Error message"
+components:
+  schemas:
+    EmailDTO:
+      type: object
+      properties:
+        ownerRef:
+          type: string
+          example: "Owner Ref"
+        emailFrom:
+          type: string
+          example: "examplefrom@example.com"
+        emailTo:
+          type: string
+          example: "exampleto@example.com"
+        subject:
+          type: string
+          example: "Example"
+        text:
+          type: string
+          example: "This is a example text."
+    EmailModel:
+      type: object
+      properties:
+        emailId:
+          type: integer
+          example: 1
+        ownerRef:
+          type: string
+          example: "Owner Ref"
+        emailFrom:
+          type: string
+          example: "examplefrom@example.com"
+        emailTo:
+          type: string
+          example: "exampleto@example.com"
+        subject:
+          type: string
+          example: "Example"
+        text:
+          type: string
+          example: "This is a example text."
+        sendDateEmail:
+          type: string
+          format: date
+          example: "2023-10-24T15:30:45.123456789"
+        statusEmail:
+          type: string
+          enum: 
+            - SEND
+            - ERROR

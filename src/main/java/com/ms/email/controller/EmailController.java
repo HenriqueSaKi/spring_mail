@@ -7,26 +7,22 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
-@RestController()
-public class EmailController {
+@RestController
+public class EmailController implements EmailApi, HealthCheckApi{
 
     @Autowired
     EmailServiceImpl service;
 
-    @GetMapping("/healthCheck")
     public ResponseEntity<String> healthCheck () {
         return ResponseEntity.status(HttpStatus.OK).body("The service is available!");
     }
 
-    @PostMapping("/send_email")
-    public ResponseEntity<EmailModel> sendEmail (@RequestBody @Valid EmailDTO emailDTO) {
+    public ResponseEntity<Object> sendEmail (@RequestBody @Valid EmailDTO emailDTO) {
         try {
             EmailModel emailModel = new EmailModel();
             BeanUtils.copyProperties(emailDTO, emailModel);
@@ -34,7 +30,7 @@ public class EmailController {
             return ResponseEntity.status(HttpStatus.CREATED).body(emailModel);
         }
         catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
     }
 
