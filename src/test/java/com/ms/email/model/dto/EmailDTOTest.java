@@ -1,5 +1,6 @@
 package com.ms.email.model.dto;
 
+import com.ms.email.mock.dto.EmailDTOMock;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -10,12 +11,7 @@ public class EmailDTOTest {
 
     @Test
     public void testEmailDTO() {
-        EmailDTO emailDTO = new EmailDTO();
-        emailDTO.setOwnerRef("Owner Ref");
-        emailDTO.setEmailFrom("emailfrom@example.com");
-        emailDTO.setEmailTo("emailto@example.com");
-        emailDTO.setSubject("Subject");
-        emailDTO.setText("Text");
+        EmailDTO emailDTO = new EmailDTOMock().getEmailDTO();
 
         Assertions.assertEquals("Owner Ref", emailDTO.getOwnerRef());
         Assertions.assertEquals("emailfrom@example.com", emailDTO.getEmailFrom());

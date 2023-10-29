@@ -1,24 +1,15 @@
 package com.ms.email.model;
 
 import com.ms.email.enums.StatusEmail;
+import com.ms.email.mock.EmailModelMock;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.time.LocalDateTime;
 
 public class EmailModelTest {
 
     @Test
     public void testEmailModel() {
-        EmailModel model = new EmailModel();
-        model.setEmailId(1L);
-        model.setOwnerRef("Owner Ref");
-        model.setEmailFrom("emailfrom@example.com");
-        model.setEmailTo("emailto@example.com");
-        model.setSubject("Subject");
-        model.setText("Text");
-        model.setSendDateEmail(LocalDateTime.now());
-        model.setStatusEmail(StatusEmail.SENT);
+        EmailModel model = new EmailModelMock().getEmailModel();
 
         Assertions.assertEquals(1L, model.getEmailId());
         Assertions.assertEquals("Owner Ref", model.getOwnerRef());
