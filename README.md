@@ -1,4 +1,27 @@
 ![](https://img.shields.io/badge/passed-quality_gate?style=flat&logo=sonarqube&logoColor=4E9BCD&label=quality%20gate&color=13C100)
 ![](https://img.shields.io/badge/83.7%25-coverage?style=flat&logo=sonarqube&logoColor=4E9BCD&label=coverage&color=999999)
 
-Swagger url: http://localhost:8080/swagger-ui/index.html
+## Description
+This project is designed for sending emails via REST or RabbitMQ. In parallel, I also worked on a cart purchase project, which sends emails when a customer places an order. The communication between these services is facilitated through a RabbitMQ queue.<br>
+If you are curious about cart purchase project, you can access it clicking [here](https://github.com/HenriqueSaKi/cart-purchase).
+
+## How to run this application
+1- Clone this project and access the folder <br>
+`git clone https://github.com/HenriqueSaKi/spring_mail.git`
+
+2- Install dependencies <br>
+`mvn clean install`
+
+3- Set environment variables <br>
+**Note:** In this step, there are multiple ways to accomplish the task. My preferred method is to open IntelliJ IDEA and edit the configurations.
+
+<div align=center>
+  <img src="https://github.com/HenriqueSaKi/spring_mail/assets/27253114/a2733132-87dc-4efd-8d39-da079b362fcd" width="375" length="200">
+</div><br>
+4- Now you can run the application
+
+<br>If your service is already up in 8080 port, you can access swagger documentation clicking in this following button:
+<br>
+[![](https://img.shields.io/badge/swagger_url-85EA2D?style=flat&logo=swagger&logoColor=black)](http://localhost:8080/swagger-ui/index.html)
+
+
