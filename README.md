@@ -33,8 +33,9 @@ If you are curious about cart purchase project, you can access it clicking [here
 3- Set environment variables <br>
 **Note:** In this step, there are multiple ways to accomplish the task. My preferred method is to open IntelliJ IDEA and edit the configurations.
 
+
 <div align=center>
-  <img src="https://github.com/HenriqueSaKi/spring_mail/assets/27253114/a2733132-87dc-4efd-8d39-da079b362fcd" width="375" length="200">
+  <img src="https://github.com/HenriqueSaKi/spring_mail/assets/27253114/0587566a-6a11-49a1-ad86-a12c885bf33d" width="375" length="200">
 </div><br>
 4- Now you can run the application
 
