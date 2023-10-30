@@ -1,5 +1,23 @@
-![](https://img.shields.io/badge/passed-quality_gate?style=flat&logo=sonarqube&logoColor=4E9BCD&label=quality%20gate&color=13C100)
-![](https://img.shields.io/badge/83.7%25-coverage?style=flat&logo=sonarqube&logoColor=4E9BCD&label=coverage&color=999999)
+## Skills achieved in this project
+
+<div align=center>
+  
+  ![](https://img.shields.io/badge/Code-Java-informational?style=flat&logo=Java&logoColor=white&color=EC1C24)
+  ![](https://img.shields.io/badge/Code-SpringBoot-informational?style=flat&logo=Spring&logoColor=white&color=#6DB33F)
+  ![](https://img.shields.io/badge/%20SQL%20Server-informational?style=flat&logo=microsoftsqlserver&logoColor=white&label=SQL%20Server&color=CC2927)
+  ![](https://img.shields.io/badge/Code-RabbitMQ-informational?style=flat&logo=rabbitmq&logoColor=white&color=FF6600)
+  ![](https://img.shields.io/badge/Code-JUnit-informational?style=flat&logo=junit5&logoColor=white&label=JUnit%205&color=25A162)
+
+</div>
+<div align=center>
+
+  ![](https://img.shields.io/badge/Tools-Intellij-informational?style=flat&logo=intellijidea&logoColor=white&color=000000)
+  ![](https://img.shields.io/badge/Tools-Git-informational?style=flat&logo=git&logoColor=white&color=%23F05032)
+  ![](https://img.shields.io/badge/Tools-GitHub-informational?style=flat&logo=GitHub&logoColor=white&color=181717)
+  ![](https://img.shields.io/badge/Tools-Postman-informational?style=flat&logo=Postman&logoColor=white&color=FF6C37)
+  ![](https://img.shields.io/badge/Tools-SonarQube-informational?style=flat&logo=SonarQube&logoColor=white&color=4E9BCD)
+
+</div>
 
 ## Description
 This project is designed for sending emails via REST or RabbitMQ. In parallel, I also worked on a cart purchase project, which sends emails when a customer places an order. The communication between these services is facilitated through a RabbitMQ queue.<br>
@@ -20,8 +38,10 @@ If you are curious about cart purchase project, you can access it clicking [here
 </div><br>
 4- Now you can run the application
 
-<br>If your service is already up in 8080 port, you can access swagger documentation clicking in this following button:
+<br>If the service is already up in 8080 port, you can access swagger documentation clicking in this following button:
 <br>
 [![](https://img.shields.io/badge/swagger_url-85EA2D?style=flat&logo=swagger&logoColor=black)](http://localhost:8080/swagger-ui/index.html)
 
-
+## SonarQube results
+![](https://img.shields.io/badge/passed-quality_gate?style=flat&logo=sonarqube&logoColor=4E9BCD&label=quality%20gate&color=13C100)
+![](https://img.shields.io/badge/83.7%25-coverage?style=flat&logo=sonarqube&logoColor=4E9BCD&label=coverage&color=999999)
